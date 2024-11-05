@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <script>
+                const numbers = [];
+
+                for (j = 1; j < 6; ++j) {
+                    if (j === 2 || j === 5) {
+                        console.log("Processing 'todo' #" + j);
+                    } else {
+                        console.log("Putting off 'todo' #" + j + " until later");
+                        numbers.push(j);
+                    }
+                }
+
+                console.log("Finished processing the priority tasks.");
+                console.log("Commencing stored tasks, most recent first.");
+
+                console.log("Now processing 'todo' #" + numbers.pop());
+                console.log("Now processing 'todo' #" + numbers.pop());
+                console.log("Now processing 'todo' #" + numbers.pop());
+            </script>
+        </div>
+    </body>
+</html>

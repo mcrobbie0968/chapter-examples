@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <script>
+                const haystack = new Array();
+                haystack[4] = "Needle";
+                haystack[11] = "Needle";
+                haystack[17] = "Needle";
+
+                for (let j = 0; j < 20; ++j)
+                {
+                    if (haystack[j] === "Needle")
+                    {
+                        console.log("- Found at location " + j);
+                        continue;
+                    }
+
+                    console.log(j + ", ");
+                }
+            </script>
+        </div>
+    </body>
+</html>

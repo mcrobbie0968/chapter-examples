@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src='functions.js'></script>
+    </head>
+    <body>
+        <div>
+            The time is: <span id='time'>...</span><br>
+
+            <script>
+                setInterval(() => showtime(byId('time')), 1000);
+
+                function showtime(object)
+                {
+                    const date = new Date();
+                    object.innerText = date.toTimeString().substr(0, 8);
+                }
+            </script>
+        </div>
+    </body>
+</html>

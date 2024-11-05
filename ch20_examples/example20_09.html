@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="react.development.js"></script>
+        <script src="react-dom.development.js"></script>
+        <script src="babel.min.js"></script>
+
+        <script type="text/babel">
+            const cats = ['lion', 'tiger', 'cheetah', 'lynx'];
+            const listOfCats = cats.map((cat, i) => <li key={i}>{cat}</li>);
+
+            ReactDOM.render(<ul>{listOfCats}</ul>, document.getElementById('display'));
+        </script>
+
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+           <div id='display' style='font-family:monospace'></div>
+        </div>
+    </body>
+</html>

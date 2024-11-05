@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                text-align:center;
+            }
+        </style>
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1>Loading a web page into a DIV</h1>
+            <div id="info">This sentence will be replaced</div>
+
+            <script>
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", "http://localhost:81/pmj7_1_examples/public_html/ch17_examples/urlpost.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.send("url=cnet.com");
+                xhr.onload = () => {
+                    if (xhr.readyState === xhr.DONE && xhr.status === 200) {
+                        document.getElementById("info").innerHTML = xhr.responseText;
+                    }
+                };
+            </script>
+        </div>
+    </body>
+</html>

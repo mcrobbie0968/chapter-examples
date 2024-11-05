@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src='functions.js'></script>
+    </head>
+    <body>
+        <div>
+            <img alt="fruit" id='object' src='apple.png'>
+
+            <script>
+                const o = byId('object');
+                o.onmouseover = function () {
+                    this.src = 'orange.png';
+                };
+                o.onmouseout = function () {
+                    this.src = 'apple.png';
+                };
+            </script>
+        </div>
+    </body>
+</html>

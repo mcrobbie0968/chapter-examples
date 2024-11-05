@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <script>
+                class User {
+                    constructor(forename, username, timezone) {
+                        this.forename = forename;
+                        this.username = username;
+                        this.timezone = timezone;
+                    }
+
+                    static greeting = "Hello";
+
+                    showUser() {
+                        console.log("Forename: " + this.forename);
+                        console.log("Username: " + this.username);
+                        console.log("Timezone: " + this.timezone);
+                    }
+
+                    static greet(name) {
+                        console.log(this.greeting + " " + name);
+                    }
+                }
+
+                const user = new User("Fred", "fred303", "UTC");
+                user.showUser();
+                
+                User.greet("Jack");
+            </script>
+        </div>
+    </body>
+</html>

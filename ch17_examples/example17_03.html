@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                text-align:center;
+            }
+        </style>
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1>Loading a web page into a DIV</h1>
+            <div id="info">This sentence will be replaced</div>
+
+            <script>
+                const params = new URLSearchParams({
+                    url: "cnet.com",
+                    nocache: Math.random() * 1000000
+                });
+                fetch("http://localhost:81/pmj7_1_examples/public_html/ch17_examples/urlget.php?" + params)
+                        .then(response => response.text())
+                        .then(text => document.getElementById("info").innerHTML = text);
+            </script>
+        </div>
+    </body>
+</html>

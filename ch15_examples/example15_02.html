@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <script>
+                let c = "Car";
+
+                displayItems("Bananas", 32.3, c);
+
+                function displayItems(...params)
+                {
+                    for (j = 0; j < params.length; ++j)
+                        console.log(params[j]);
+                }
+            </script>
+        </div>
+    </body>
+</html>
